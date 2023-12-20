@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import {ProductoresService} from '../../services/productores.service';
+
 @Component({
   selector: 'app-prod-ver',
   templateUrl: './prod-ver.component.html',
@@ -9,9 +11,9 @@ import { HttpClient } from '@angular/common/http';
 export class ProdVerComponent {
 
   data: any;
-  constructor(private http: HttpClient) {
+  constructor(private formDataService: ProductoresService) {
     //get request from web api
-    this.http.get('https://jsonplaceholder.typicode.com/users').subscribe(data => {
+    this.formDataService.productores().subscribe(data => {
       console.log(data);
       this.data = data;
       setTimeout(() => {

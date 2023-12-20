@@ -9,7 +9,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PagesModule } from './pages/pages.module';
 import { AuthModule } from './auth/auth.module';
 
-
+import { DataTablesModule } from "angular-datatables";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,8 +22,9 @@ import { AuthModule } from './auth/auth.module';
     BrowserAnimationsModule,
     NgbModule,
     PagesModule,
-    AuthModule
-    
+    AuthModule,
+    DataTablesModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

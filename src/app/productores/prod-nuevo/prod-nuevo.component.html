@@ -1,34 +1,34 @@
 <hr />
 <div class="container p-4">
-  <form>
+  <form [formGroup]="form" (ngSubmit)="save($event)">
     <div class="row p-2">
       <div class="form-group col-md-6">
         <label for="inputEmail4">Nombre completo</label>
-        <input type="email" class="form-control" id="inputEmail4" />
+        <input type="email" class="form-control" formControlName="nombre" />
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword4">Cedula</label>
-        <input type="password" class="form-control" />
+        <input type="password" class="form-control" formControlName="cedula" />
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword4">Direccion</label>
-        <input type="password" class="form-control" />
+        <input type="password" class="form-control" formControlName="direccion" />
       </div>
     </div>
     <div class="row p-2">
       <div class="form-group col-6">
         <label for="inputAddress">Contacto</label>
-        <input type="text" class="form-control" id="inputAddress" />
+        <input type="text" class="form-control" id="inputAddress" formControlName="contacto" />
       </div>
       <div class="form-group col-6">
         <label for="inputAddress2">Tipo de leche producida</label>
-        <input type="text" class="form-control" id="inputAddress2" />
+        <input type="text" class="form-control" id="inputAddress2" formControlName="tipo_leche" />
       </div>
     </div>
 
     <div class="form-group p-2">
       <label for="inputAddress2">Observaciones</label>
-      <input type="text" class="form-control" />
+      <input type="text" class="form-control" formControlName="observaciones" />
     </div>
 
     <button type="submit" class="btn btn-primary m-2 w-100">Guardar</button>
