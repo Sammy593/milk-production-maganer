@@ -12,6 +12,7 @@ export class ProductoresService {
   users(){
     return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
+  
 }
 
 
