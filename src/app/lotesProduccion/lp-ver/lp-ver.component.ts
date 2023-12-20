@@ -2,11 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-rgl-ver',
-  templateUrl: './rgl-ver.component.html',
-  styleUrls: ['./rgl-ver.component.scss']
+  selector: 'app-lp-ver',
+  templateUrl: './lp-ver.component.html',
+  styleUrls: ['./lp-ver.component.scss']
 })
-export class RglVerComponent {
+export class LpVerComponent {
 
   data:any;
   constructor(private http: HttpClient){
@@ -22,10 +22,6 @@ export class RglVerComponent {
   } );
   }, 1);
         }, error => console.error(error));
-}
-
-eliminar(cedula:string){
-  console.log(cedula);
 }
 
 }
