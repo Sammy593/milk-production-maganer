@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, catchError, map, of } from 'rxjs';
 import { Data_form } from '../models/productores/data_form.model';
 
-const base_url = "http://localhost:3500";
+const base_url = "http://localhost:8080/";
 @Injectable({
   providedIn: 'root',
 })
@@ -24,11 +24,12 @@ export class ProductoresService {
   }
 
   productores(){
-    return this.http.get('https://jsonplaceholder.typicode.com/users');
+    const url = `${base_url}/findProductores/`;
+    return this.http.get(url);
   }
   
   insert(data_form: any): Observable<any> {
-    const url = `${base_url}/`;
+    const url = `${base_url}/add/productoresDeLeche`;
     const headers = this.headers;
     if (headers) {
       return this.http.post(url, data_form, headers);
